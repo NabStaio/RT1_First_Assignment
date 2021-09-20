@@ -1,0 +1,5 @@
+<launch>
+	<arg name="va" default="0" />
+	<node name="random_server" pkg="holonomic_control" type="random_server" output="screen"/>
+	<node name="holo_move" pkg="holonomic_control" type="holo_move" args="$(arg va)" output="screen"/>
+</launch>
